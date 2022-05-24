@@ -1,1 +1,2 @@
-print("my eoeo")
+print("my")
+
