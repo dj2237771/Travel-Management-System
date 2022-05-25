@@ -1,13 +1,14 @@
 class Trip:
-    def __init__(self, Name, Start_date, End_date, Traveller_list, Trip_leg, Suport_staff, Trip_coordinator,Trip_manager, Trip_cost):
-        self.Name = Name
-        self.Start_date = Start_date
-        self.End_date = End_date
-        self.Traveller_list = Traveller_list
-        self.Trip_leg = Trip_leg
-        self.Support_staff = Suport_staff
-        self.Trip_coordinator = Trip_coordinator
-        self.Trip_manager = Trip_manager
+
+    def __init__(self, name, start_date, end_date, traveller_list, trip_leg, support_staff, trip_coordinator, trip_manager, trip_cost):
+        self.name = name
+        self.start_date = start_date
+        self.end_date = end_date
+        self.traveller_list = traveller_list
+        self.trip_leg = trip_leg
+        self.support_staff = support_staff
+        self.trip_coordinator = trip_coordinator
+        self.trip_manager = trip_manager
 
     def trip_cost(self):
         print(...)
