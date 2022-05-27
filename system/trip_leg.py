@@ -1,7 +1,7 @@
 from enum import Enum
 
 
-class Trip_leg:
+class TripLeg:
     def __init__(self, start_location, end_location, transport, price):
         self.location = start_location
         self.location = end_location
