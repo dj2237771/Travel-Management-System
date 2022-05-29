@@ -24,7 +24,7 @@ class TripCoordinator:
     def print_recites(self):
 
 
-class trip_manager(TripCoordinator):
+class TripManager(TripCoordinator):
     def __init__(self, name, user, password):
         super().__init__(self, name, user, password)
     def create_trip_coordinator(self):
@@ -43,7 +43,7 @@ class trip_manager(TripCoordinator):
 
     def total_invoice(self):
 
-class administrator(TripCoordinator):
+class Administrator(TripCoordinator):
     def __init__(self, name, user, password):
         super().__init__(self, name, user, password)
     def create_trip_manager(self):
