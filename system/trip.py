@@ -1,6 +1,7 @@
 import pprint
 import json
 
+
 class Trip:
 
     def __init__(self, name, start_date, end_date, traveller_list, trip_leg, trip_support, trip_coordinator,

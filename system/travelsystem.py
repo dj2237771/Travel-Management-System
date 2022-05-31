@@ -36,10 +36,23 @@ class TravelSystem:
 
                     travellers = []
                     for traveller in trip["traveller_list"]:
-
                         travellers.append(Traveller(traveller["name"], traveller["address"], traveller["date_of_birth"],
                                                     traveller["emergency_contact"]))
                     self.trips.append(
-                        Trip(trip["name"], trip["start_date"], trip["end_date"], travellers, trip["trip_leg"], trip["trip_support"],
+                        Trip(trip["name"], trip["start_date"], trip["end_date"], travellers, trip["trip_leg"],
+                             trip["trip_support"],
                              trip["trip_coordinator"], trip["trip_manager"]))
 
+    def deletetrip(self, index):
+        del self.trips[index]
+
+    def modifytrip(self, index, name, start_date, end_date, traveller_list, trip_leg, trip_support, trip_coordinator,
+                   trip_manager):
+        self.trips[index].name = name
+        self.trips[index].start_date = start_date
+        self.trips[index].end_date = end_date
+        self.trips[index].traveller_list = traveller_list
+        self.trips[index].trip_leg = trip_leg
+        self.trips[index].trip_support = trip_support
+        self.trips[index].trip_coordinator = trip_coordinator
+        self.trips[index].trip_manager = trip_manager
