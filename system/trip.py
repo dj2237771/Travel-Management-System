@@ -1,3 +1,6 @@
+import pprint
+import json
+
 class Trip:
 
     def __init__(self, name, start_date, end_date, traveller_list, trip_leg, trip_support, trip_coordinator,
@@ -11,16 +14,19 @@ class Trip:
         self.trip_coordinator = trip_coordinator
         self.trip_manager = trip_manager
 
+    def toJSON(self):
+        return json.dumps(self, default=lambda o: o.__dict__,
+                          sort_keys=True, indent=4)
+
     def trip_cost(self):
         print(...)
         # self.Trip_cost = Trip_cost
 
     def __str__(self):
-        return f' | name:{self.name}, travellers: {self.traveller_list} |\n '
+        return pprint.pformat(vars(self), indent=4, width=1)
 
     def __repr__(self):
-        return f' | name:{self.name}, travellers: {self.traveller_list} |\n '
-
+        return pprint.pformat(vars(self), indent=4, width=1)
 # •	Trip
 # o	Name
 # o	Strat date

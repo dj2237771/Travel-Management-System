@@ -1,9 +1,18 @@
+import pprint
+
+
 class Traveller:
     def __init__(self, name, address, date_of_birth, emergency_contact):
         self.name = name
         self.address = address
         self.date_of_birth = date_of_birth
         self.emergency_contact = emergency_contact
+
+    def __str__(self):
+        return pprint.pformat(vars(self), indent=4, width=1)
+
+    def __repr__(self):
+        return pprint.pformat(vars(self), indent=4, width=1)
 
 
 class ID(Traveller):

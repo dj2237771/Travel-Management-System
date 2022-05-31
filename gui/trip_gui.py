@@ -134,7 +134,6 @@ class TripFrame(Frame):
         trip_manager = self.trip_manager_entry.get()
 
         self.travel_system.addtrip(name, start_date, end_date, traveller_list, trip_leg, trip_support, trip_coordinator, trip_manager)
-        print(self.travel_system.trips)
 
     def __add_traveller_form(self):
         self.traveller_frame = TravellerFrame(self, self.travel_system)
